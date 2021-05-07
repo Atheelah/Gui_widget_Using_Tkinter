@@ -13,17 +13,18 @@ label_2 = Label(window, text = "Enter 2nd Number")
 label_3 = Label(window, text = "Answer")
 label_4 = Label(window)
 
-first_number = Entry (window)
-second_number = Entry (window)
-total = Entry (window)
+first_number = Entry(window)
+second_number = Entry(window)
+total = Entry(window)
 
-def button_clear ():
 
-    total.delete (0, END)
+def button_clear():
+    total.delete(0, END)
     first_number.delete(0, END)
     second_number.delete(0, END)
 
-def button_add ():
+
+def button_add():
     dig_1 = first_number.get();
     dig_2 = second_number.get();
     first_addition = int(dig_1)
@@ -32,13 +33,15 @@ def button_add ():
 
     total.insert(0, sum)
 
-def button_exit ():
+
+def button_exit():
     import sys
     sys.exit()
 
-button_add = Button (window, borderwidth=5, font=("Consolas 15 bold"),text="Add", bg="white", fg="black", width=10, command=button_add)
-button_clear = Button (window, text = "Clear", borderwidth=5, font=("Consolas 15 bold"), bg="white", fg="black", width=10, command=button_clear)
-button_exit = Button (window, text = "Exit", borderwidth=5, font=("Consolas 15 bold"), bg="white", fg="black", width=10, command=button_exit)
+
+button_add = Button(window, borderwidth=5, font=("Consolas 15 bold"),text="Add", bg="white", fg="black", width=10, command=button_add)
+button_clear = Button(window, text = "Clear", borderwidth=5, font=("Consolas 15 bold"), bg="white", fg="black", width=10, command=button_clear)
+button_exit = Button(window, text = "Exit", borderwidth=5, font=("Consolas 15 bold"), bg="white", fg="black", width=10, command=button_exit)
 
 label_1.grid(row=0, column=0, padx=10, pady=10)
 label_2.grid(row=1, column=0, padx=10, pady=10)
